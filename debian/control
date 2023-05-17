@@ -1,15 +1,40 @@
-Source: template-repository
-Section: unknown
+Source: hotspot
+Section: utils
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Yanhao Mo <yanhaocs@gmail.com>
+Build-Depends:
+ debhelper (>=11~),
+ cmake,
+ extra-cmake-modules,
+ libkf5threadweaver-dev,
+ libkf5i18n-dev,
+ libkf5coreaddons-dev,
+ libkf5itemviews-dev,
+ libkf5itemmodels-dev,
+ libkf5kio-dev,
+ libkf5configwidgets-dev,
+ libkf5solid-dev,
+ libkf5windowsystem-dev,
+ libqt5svg5-dev,
+ libelf-dev,
+ libdw-dev,
+ gettext,
+Standards-Version: 4.2.1
+Homepage: https://github.com/KDAB/hotspot
+Vcs-Git: https://salsa.debian.org/debian/hotspot.git
+Vcs-Browser: https://salsa.debian.org/debian/hotspot
 
-Package: template-repository
+Package: hotspot
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ linux-perf,
+ policykit-1,
+Description: GUI tool for performance analysis
+ hotspot project is a KDAB R&D effort to create a
+ standalone GUI tool for performance data. This tool
+ now only support perf output data. But is intended to
+ support various other performance data formats in the
+ future.
