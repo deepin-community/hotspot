@@ -1,0 +1,47 @@
+.TH hotspot 1 "August 28, 2018"
+
+.SH NAME
+hotspot \- Linux perf GUI for performance analysis.
+
+.SH SYNOPSIS
+.B hotspot
+.RI [ OPTION... ] [ FILE... ]
+
+.SH DESCRIPTION
+hotspot is a KDAB R&D effort to create a standalone GUI tool for performance data. This tool now only support perf output data. But is intended to support various other performance data formats in the future.
+
+.SH OPTIONS
+.TP
+.BR \-h ", " \-\-help
+Show help information.
+.TP
+.BR \-v ", " \-\-version
+Show version information.
+.TP
+.BR \-\-sysroot ", " \<path\>
+Specify path to sysroot which is used to find libraries.
+.TP
+.BR \-\-kallsyms ", " \<path\>
+Specify path to kallsyms file which is used to resolve kernel symbols
+.TP
+.BR \-\-debugPaths ", " \<paths\>
+Colon separated list of paths that contain debug information.
+.TP
+.BR \-\-extraLibPaths \<paths\>
+Colon separated list of extra paths to find libraries.
+.TP
+.BR \-\-appPath \<path\>
+Specify path to folder containing the application executable and libraries.
+.TP
+.BR \-\-arch \<path\>
+Architecture to use for unwinding.
+
+.SH AUTHOR
+.B hotspot
+is written by Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>.
+
+This manual page was written by
+.MT yanhaocs@gmail.com
+Yanhao Mo
+.ME
+for the Debian project (but may be used by others).
